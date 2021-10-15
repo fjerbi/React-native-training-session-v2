@@ -31,19 +31,21 @@ const ListScreen = () => {
       name: "Friend #9",
     },
   ];
-  return <FlatList 
-  showsHorizontalScrollIndicator={false}
-  keyExtractor={(friend) =>friend.name}
-  data={friends}
-   renderItem={({item}) => {
-       return <Text style={styles.textStyle}>{item.name}</Text>
-   }} 
-   />;
+  return (
+    <FlatList
+      showsHorizontalScrollIndicator={false}
+      keyExtractor={(friend) => friend.name}
+      data={friends}
+      renderItem={({ item }) => {
+        return <Text style={styles.textStyle}>{item.name}</Text>;
+      }}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
-    textStyle:{
-        marginVertical: 50
-    }
+  textStyle: {
+    marginVertical: 50,
+  },
 });
 export default ListScreen;
