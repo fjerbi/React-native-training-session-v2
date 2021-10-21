@@ -1,5 +1,6 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
+import BoxScreen from "./src/screens/BoxScreen";
 import ColorScreen from "./src/screens/ColorScreen";
 import ComponentScreen from "./src/screens/ComponentScreen";
 import CounterScreen from "./src/screens/CounterScreen";
@@ -18,6 +19,7 @@ const navigator = createStackNavigator(
     Counter:CounterScreen,
     Color:ColorScreen,
     Square:SquareScreen,
+    Box: BoxScreen
   },
   {
     initialRouteName: "Home",
